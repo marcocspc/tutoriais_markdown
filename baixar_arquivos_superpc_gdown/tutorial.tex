@@ -1,0 +1,46 @@
+\documentclass[12pt, a4paper]{report}
+
+\usepackage{markdown}
+\usepackage{blindtext} % GERAR LIPSUM PARA TESTES
+\usepackage[utf8]{inputenc} % USAR CARACTERES LATINOS
+\usepackage[T1]{fontenc} % USAR CARACTERES LATINOS
+%\font\times=cmr12 at 12pt %Deixar a fonte do titulo e do autor em 12pt
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry} % DEFINIR MARGENS
+\usepackage{times} % USAR FONTE TIMES NEW ROMAN
+\usepackage{indentfirst} % Indentar primeira linha dos parágrafos
+\usepackage{lettrine}
+
+\usepackage[Export]{adjustbox}
+\adjustboxset*{width=.3\linewidth}
+
+%Espaçamento entre parágrafos
+\setlength{\parskip}{1em}
+
+
+% Desabilitar Impressao de Capitulo X e Centralizar (# em mardown)
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries\centering}{}{0pt}{\Large}
+
+% Centralizar titulo de secoes e subsecoes e subsubsecoes (##, ### e #### em markdown)
+\titleformat{\section}[block]{\large\bfseries\filcenter}{}{1em}{} 
+\titleformat{\subsection}[block]{\normalsize\bfseries\filcenter}{}{1em}{} 
+\titleformat{\subsubsection}[block]{\small\bfseries\filcenter}{}{1em}{} 
+
+\usepackage[brazil]{babel} %corrigir separação silábica
+
+
+%%%%%%%%%%%% TÍTULO E NOME DO AUTOR ; REMOVA O COMENTÁTIO DO \maketitle %%%%%%%%%%%
+\title{}  % TÍTULO
+\author{}  %NOME DO AUTOR
+\date{} %REMOVER DATA DO TÍTULO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Descomente se quiser a primeira página com titulo e nome do autor
+% NAO SE ESQUECA DE PREENCHER \title e \title la em cima
+%\maketitle
+
+\markdownInput{tutorial.md}
+
+\end{document}
